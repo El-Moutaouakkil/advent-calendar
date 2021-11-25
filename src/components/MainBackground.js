@@ -25,18 +25,22 @@ const BgContainer = styled.div`
     }
 
     .animation {
-        width: 100%;
+        display: block;
+        width: 700px;
         position: absolute;
         top: 0;
         left: 0;
-        /* z-index: -5; */
-        /* border : 2px solid orange; */
     }
 
     @media all and (min-width: 469px) {
         img {
             width: 100%;
             height: 100%;
+        }
+        .animation {
+            width: 90%;
+            height: 100%;
+            /* display: block; */
         }
     }
 `;
