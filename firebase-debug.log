@@ -1,0 +1,319 @@
+[debug] [2021-11-26T19:32:26.382Z] ----------------------------------------------------------------------
+[debug] [2021-11-26T19:32:26.384Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy --debug
+[debug] [2021-11-26T19:32:26.384Z] CLI Version:   9.23.0
+[debug] [2021-11-26T19:32:26.384Z] Platform:      win32
+[debug] [2021-11-26T19:32:26.384Z] Node Version:  v14.18.0
+[debug] [2021-11-26T19:32:26.385Z] Time:          Fri Nov 26 2021 20:32:26 GMT+0100 (UTC+01:00)
+[debug] [2021-11-26T19:32:26.386Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-11-26T19:32:26.441Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-11-26T19:32:26.443Z] > authorizing via signed-in user (zazansama@gmail.com)
+[debug] [2021-11-26T19:32:26.444Z] [iam] checking project advent-calendar-f3e42 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-11-26T19:32:26.447Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-11-26T19:32:26.448Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-26T19:32:26.651Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Fri, 26 Nov 2021 19:32:25 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-26T19:32:26.667Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/advent-calendar-f3e42:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-11-26T19:32:27.416Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 26 Nov 2021 19:32:26 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=611","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-26T19:32:27.418Z] > refreshing access token with scopes: []
+[debug] [2021-11-26T19:32:27.419Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-26T19:32:27.570Z] <<< HTTP RESPONSE 200 {"date":"Fri, 26 Nov 2021 19:32:26 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-26T19:32:27.593Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/advent-calendar-f3e42 [none]
+[debug] [2021-11-26T19:32:27.930Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/advent-calendar-f3e42 200
+[debug] [2021-11-26T19:32:27.931Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/advent-calendar-f3e42 {"projectId":"advent-calendar-f3e42","projectNumber":"661593700787","displayName":"advent-calendar","name":"projects/advent-calendar-f3e42","resources":{"hostingSite":"advent-calendar-f3e42"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'advent-calendar-f3e42'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2021-11-26T19:32:27.936Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-11-26T19:32:27.937Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-26T19:32:28.092Z] <<< HTTP RESPONSE 200 {"date":"Fri, 26 Nov 2021 19:32:27 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-26T19:32:28.110Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/advent-calendar-f3e42/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2021-11-26T19:32:29.479Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 26 Nov 2021 19:32:28 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[advent-calendar-f3e42]: beginning deploy... 
+[info] i  hosting[advent-calendar-f3e42]: found 35 files in build 
+[debug] [2021-11-26T19:32:29.502Z] [hosting] hash cache [YnVpbGQ] not populated
+[debug] [2021-11-26T19:32:29.844Z] > refreshing access token with scopes: []
+[debug] [2021-11-26T19:32:29.844Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-26T19:32:29.846Z] [hosting] hash cache [YnVpbGQ] stored for 35 files
+[debug] [2021-11-26T19:32:29.847Z] [hosting][hash queue][FINAL] {"max":329,"min":18,"avg":152.31428571428572,"active":0,"complete":35,"success":35,"errored":0,"retried":0,"total":35,"elapsed":345}
+[debug] [2021-11-26T19:32:29.998Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Fri, 26 Nov 2021 19:32:29 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-26T19:32:30.013Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/sites/advent-calendar-f3e42/versions/13b3f985c9577043:populateFiles [none]
+[debug] [2021-11-26T19:32:30.013Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/advent-calendar-f3e42/versions/13b3f985c9577043:populateFiles {"files":{"/asset-manifest.json":"881cb7be9936bd5c823a6472c18102f2da11ea98868497a1e6ec83402056ece1","/index.html":"31afd1afbebd9f7e59f0b4e824a9514ee75de08f0d48f11f63e720447c4da009","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/manifest.json":"aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a","/static/css/main.6efd6ee2.chunk.css":"4635f81ece1fed94d4e7260ae5d0d70959ed324fbddb9809411ee160355fe19a","/static/css/main.6efd6ee2.chunk.css.map":"cd62299a43873a326aeec932e6ae1c664feb003717df73591baf577a0e89504b","/static/js/2.7a5a40ee.chunk.js.LICENSE.txt":"a2643b26d0891f07f920d86af2e9ebb00cc71b06e41e9ceb6856e879943bb5a8","/static/js/main.631405bf.chunk.js":"cfbe251c56bb23a007af1eff708ffdf9485fc2ecb9f5817ee53e5bb81384479c","/static/js/main.631405bf.chunk.js.map":"65cb49d7a6851709577c0c063e514caf9fff240530d7fb2db076b93b360b8b9c","/static/js/runtime-main.5f23accb.js":"31c7a993ff4e3ab023d99275e8dd1ebdc6c2ca943b31977cfad774e74ce62e21","/static/js/runtime-main.5f23accb.js.map":"e17c789b1bb5e3851b65ae56085b2fed522ce338cfdbdb33529c02778267112e","/assets/gifs/luci_municipio.gif":"d441b9ebdd65c3dcb23d23a3e2d982ef74377ae572f0b997208bff7dd1a737c4","/assets/gifs/luci_banca.gif":"0eb4ee1b441414eb396cfabce100317f1d320d23a0d99e054352358ce8ea4bf7","/static/js/2.7a5a40ee.chunk.js":"20fe6d20add25b9b776a67324ddddebd89e5a353c84bdc5f8899b61053b19b30","/assets/animations/luci_municipio.webm":"2782193de475e11ffa18da13a0927acb5c755578ff6c24c7927a1b78e39dff72","/assets/animations/luci_banca.webm":"c9ad909460dcef572cb201609c7e2be08aacb4b3099c2417bd972a4c116d0dd0","/assets/title.png":"bc9e9224717d1d9e055a8bf418da0ce0b28b8ab0c46da4f02d861b388ae467c7","/assets/gifs/fontana.gif":"384528b51799e2d047c546d90098644d9d3b04a8152abacb6924969a359e5899","/assets/animations/casette.webm":"60c6c814ad7a373b646b689e3407add3fdcc575e49db8c8bfab708652bd06ff8","/static/js/2.7a5a40ee.chunk.js.map":"a77bc7d25c846387910a2b95173394e057a45c25b3fd14d72a124f309e053da9","/assets/animations/fontana.webm":"9bc7bf672d82cb7a0ba9bf673ff2bff1a5a63f37a86c53ced6da9f4f13bd17ab","/assets/map.jpg":"b39c5f4e9e39a2cf929c2365658cf3b543ddbfc205afd700d15283cb53be78ab","/assets/gifs/imbarcadero.gif":"88b9fd1e3d6994414425f75d8a63a268f9b24d46f9f8fd7ff89f43ed2144462b","/assets/animations/luci_centro.webm":"aba53654304be5469856f7a9cedb4323af0962320cf071f66d30fff265b87ab4","/assets/animations/forziere.webm":"e9c3c275cf7ab3f65a96dd5defc6b751c2f564d3d1d6a2c14fdffc74dd8246e6","/assets/animations/albero.webm":"b0635abe7a2ee59d0e3d9783ca24acfd5626e93d4911aacf2048b77349fddda7","/assets/animations/tetto.webm":"c69d631df9c37384014a2c91c96d330e57f0d3eeffbb65eed0f67e5fa387e30f","/assets/animations/luci_dx.webm":"ced2642747e5082820adcd20d30ad2788ab02e62f7bf0be3ff43102dab43f64f","/assets/animations/luci_sx_bottom.webm":"dfbad13789660278089ccd0464c8ad8368adc100e6fc92df63c4f4f5cd5ed383","/assets/animations/luci_sx_top.webm":"5492ccf3a87d58aacaee1d4766260c1f668174d49b87ce5fb1aa3333380d3822","/assets/gifs/albero.gif":"cf0221d8c1255d395c50398481f26f1b3cfab3194b6adb48164999d8d2e0f8e3","/assets/gifs/luci_centro.gif":"1c623a9027af30d54d1688a1c85e534edd76c88638a1b1404c5980d5db46b899","/assets/gifs/casette.gif":"e04c06b03fa171004708cb43970940a760b8cd428eba49d6fc65c039bc7332f9","/assets/gifs/luci_dx.gif":"2ce089a9c53284ab05a48d137de9b866e82c263f446f8cbe1cbc755c9d232b9d","/assets/gifs/luci_sx_bottom.gif":"221ed55bf728ce29c66cdec49f766ba432e44b54f13901e8572bc08cca15173c"}}
+[debug] [2021-11-26T19:32:31.179Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/sites/advent-calendar-f3e42/versions/13b3f985c9577043:populateFiles 200
+[debug] [2021-11-26T19:32:31.180Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/advent-calendar-f3e42/versions/13b3f985c9577043:populateFiles {"uploadRequiredHashes":["b39c5f4e9e39a2cf929c2365658cf3b543ddbfc205afd700d15283cb53be78ab","e04c06b03fa171004708cb43970940a760b8cd428eba49d6fc65c039bc7332f9","cf0221d8c1255d395c50398481f26f1b3cfab3194b6adb48164999d8d2e0f8e3","88b9fd1e3d6994414425f75d8a63a268f9b24d46f9f8fd7ff89f43ed2144462b","221ed55bf728ce29c66cdec49f766ba432e44b54f13901e8572bc08cca15173c","aba53654304be5469856f7a9cedb4323af0962320cf071f66d30fff265b87ab4","2ce089a9c53284ab05a48d137de9b866e82c263f446f8cbe1cbc755c9d232b9d","dfbad13789660278089ccd0464c8ad8368adc100e6fc92df63c4f4f5cd5ed383","1c623a9027af30d54d1688a1c85e534edd76c88638a1b1404c5980d5db46b899","ced2642747e5082820adcd20d30ad2788ab02e62f7bf0be3ff43102dab43f64f","5492ccf3a87d58aacaee1d4766260c1f668174d49b87ce5fb1aa3333380d3822"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files"}
+[debug] [2021-11-26T19:32:31.184Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/b39c5f4e9e39a2cf929c2365658cf3b543ddbfc205afd700d15283cb53be78ab [none]
+[debug] [2021-11-26T19:32:31.185Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/b39c5f4e9e39a2cf929c2365658cf3b543ddbfc205afd700d15283cb53be78ab [stream]
+[debug] [2021-11-26T19:32:31.186Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/e04c06b03fa171004708cb43970940a760b8cd428eba49d6fc65c039bc7332f9 [none]
+[debug] [2021-11-26T19:32:31.187Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/e04c06b03fa171004708cb43970940a760b8cd428eba49d6fc65c039bc7332f9 [stream]
+[debug] [2021-11-26T19:32:31.188Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/cf0221d8c1255d395c50398481f26f1b3cfab3194b6adb48164999d8d2e0f8e3 [none]
+[debug] [2021-11-26T19:32:31.189Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/cf0221d8c1255d395c50398481f26f1b3cfab3194b6adb48164999d8d2e0f8e3 [stream]
+[debug] [2021-11-26T19:32:31.191Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/88b9fd1e3d6994414425f75d8a63a268f9b24d46f9f8fd7ff89f43ed2144462b [none]
+[debug] [2021-11-26T19:32:31.192Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/88b9fd1e3d6994414425f75d8a63a268f9b24d46f9f8fd7ff89f43ed2144462b [stream]
+[debug] [2021-11-26T19:32:31.194Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/221ed55bf728ce29c66cdec49f766ba432e44b54f13901e8572bc08cca15173c [none]
+[debug] [2021-11-26T19:32:31.197Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/221ed55bf728ce29c66cdec49f766ba432e44b54f13901e8572bc08cca15173c [stream]
+[debug] [2021-11-26T19:32:31.199Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/aba53654304be5469856f7a9cedb4323af0962320cf071f66d30fff265b87ab4 [none]
+[debug] [2021-11-26T19:32:31.200Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/aba53654304be5469856f7a9cedb4323af0962320cf071f66d30fff265b87ab4 [stream]
+[debug] [2021-11-26T19:32:31.202Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/2ce089a9c53284ab05a48d137de9b866e82c263f446f8cbe1cbc755c9d232b9d [none]
+[debug] [2021-11-26T19:32:31.204Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/2ce089a9c53284ab05a48d137de9b866e82c263f446f8cbe1cbc755c9d232b9d [stream]
+[debug] [2021-11-26T19:32:31.208Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/dfbad13789660278089ccd0464c8ad8368adc100e6fc92df63c4f4f5cd5ed383 [none]
+[debug] [2021-11-26T19:32:31.209Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/dfbad13789660278089ccd0464c8ad8368adc100e6fc92df63c4f4f5cd5ed383 [stream]
+[debug] [2021-11-26T19:32:31.214Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/1c623a9027af30d54d1688a1c85e534edd76c88638a1b1404c5980d5db46b899 [none]
+[debug] [2021-11-26T19:32:31.215Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/1c623a9027af30d54d1688a1c85e534edd76c88638a1b1404c5980d5db46b899 [stream]
+[debug] [2021-11-26T19:32:31.216Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/ced2642747e5082820adcd20d30ad2788ab02e62f7bf0be3ff43102dab43f64f [none]
+[debug] [2021-11-26T19:32:31.217Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/ced2642747e5082820adcd20d30ad2788ab02e62f7bf0be3ff43102dab43f64f [stream]
+[debug] [2021-11-26T19:32:31.218Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/5492ccf3a87d58aacaee1d4766260c1f668174d49b87ce5fb1aa3333380d3822 [none]
+[debug] [2021-11-26T19:32:31.220Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/5492ccf3a87d58aacaee1d4766260c1f668174d49b87ce5fb1aa3333380d3822 [stream]
+[debug] [2021-11-26T19:32:31.223Z] [hosting][populate queue][FINAL] {"max":1340,"min":1340,"avg":1340,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1379}
+[debug] [2021-11-26T19:32:31.224Z] [hosting] uploads queued: 11
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[debug] [2021-11-26T19:33:01.592Z] [uploadQueue] Retrying task b39c5f4e9e39a2cf929c2365658cf3b543ddbfc205afd700d15283cb53be78ab
+[debug] [2021-11-26T19:33:01.593Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/b39c5f4e9e39a2cf929c2365658cf3b543ddbfc205afd700d15283cb53be78ab [none]
+[debug] [2021-11-26T19:33:01.594Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/b39c5f4e9e39a2cf929c2365658cf3b543ddbfc205afd700d15283cb53be78ab [stream]
+[debug] [2021-11-26T19:33:01.596Z] [uploadQueue] Retrying task 88b9fd1e3d6994414425f75d8a63a268f9b24d46f9f8fd7ff89f43ed2144462b
+[debug] [2021-11-26T19:33:01.597Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/88b9fd1e3d6994414425f75d8a63a268f9b24d46f9f8fd7ff89f43ed2144462b [none]
+[debug] [2021-11-26T19:33:01.597Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/88b9fd1e3d6994414425f75d8a63a268f9b24d46f9f8fd7ff89f43ed2144462b [stream]
+[debug] [2021-11-26T19:33:01.599Z] [uploadQueue] Retrying task aba53654304be5469856f7a9cedb4323af0962320cf071f66d30fff265b87ab4
+[debug] [2021-11-26T19:33:01.600Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/aba53654304be5469856f7a9cedb4323af0962320cf071f66d30fff265b87ab4 [none]
+[debug] [2021-11-26T19:33:01.601Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/aba53654304be5469856f7a9cedb4323af0962320cf071f66d30fff265b87ab4 [stream]
+[debug] [2021-11-26T19:33:01.602Z] [uploadQueue] Retrying task dfbad13789660278089ccd0464c8ad8368adc100e6fc92df63c4f4f5cd5ed383
+[debug] [2021-11-26T19:33:01.603Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/dfbad13789660278089ccd0464c8ad8368adc100e6fc92df63c4f4f5cd5ed383 [none]
+[debug] [2021-11-26T19:33:01.603Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/dfbad13789660278089ccd0464c8ad8368adc100e6fc92df63c4f4f5cd5ed383 [stream]
+[debug] [2021-11-26T19:33:01.604Z] [uploadQueue] Retrying task 1c623a9027af30d54d1688a1c85e534edd76c88638a1b1404c5980d5db46b899
+[debug] [2021-11-26T19:33:01.605Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/1c623a9027af30d54d1688a1c85e534edd76c88638a1b1404c5980d5db46b899 [none]
+[debug] [2021-11-26T19:33:01.606Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/1c623a9027af30d54d1688a1c85e534edd76c88638a1b1404c5980d5db46b899 [stream]
+[debug] [2021-11-26T19:33:01.607Z] [uploadQueue] Retrying task ced2642747e5082820adcd20d30ad2788ab02e62f7bf0be3ff43102dab43f64f
+[debug] [2021-11-26T19:33:01.608Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/ced2642747e5082820adcd20d30ad2788ab02e62f7bf0be3ff43102dab43f64f [none]
+[debug] [2021-11-26T19:33:01.608Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/ced2642747e5082820adcd20d30ad2788ab02e62f7bf0be3ff43102dab43f64f [stream]
+[debug] [2021-11-26T19:33:01.609Z] [uploadQueue] Retrying task 5492ccf3a87d58aacaee1d4766260c1f668174d49b87ce5fb1aa3333380d3822
+[debug] [2021-11-26T19:33:01.610Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/5492ccf3a87d58aacaee1d4766260c1f668174d49b87ce5fb1aa3333380d3822 [none]
+[debug] [2021-11-26T19:33:01.611Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/5492ccf3a87d58aacaee1d4766260c1f668174d49b87ce5fb1aa3333380d3822 [stream]
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[debug] [2021-11-26T19:33:05.705Z] [uploadQueue] Retrying task cf0221d8c1255d395c50398481f26f1b3cfab3194b6adb48164999d8d2e0f8e3
+[debug] [2021-11-26T19:33:05.707Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/cf0221d8c1255d395c50398481f26f1b3cfab3194b6adb48164999d8d2e0f8e3 [none]
+[debug] [2021-11-26T19:33:05.707Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/cf0221d8c1255d395c50398481f26f1b3cfab3194b6adb48164999d8d2e0f8e3 [stream]
+[debug] [2021-11-26T19:33:06.378Z] [uploadQueue] Retrying task 2ce089a9c53284ab05a48d137de9b866e82c263f446f8cbe1cbc755c9d232b9d
+[debug] [2021-11-26T19:33:06.379Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/2ce089a9c53284ab05a48d137de9b866e82c263f446f8cbe1cbc755c9d232b9d [none]
+[debug] [2021-11-26T19:33:06.379Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/2ce089a9c53284ab05a48d137de9b866e82c263f446f8cbe1cbc755c9d232b9d [stream]
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[debug] [2021-11-26T19:33:12.213Z] [uploadQueue] Retrying task e04c06b03fa171004708cb43970940a760b8cd428eba49d6fc65c039bc7332f9
+[debug] [2021-11-26T19:33:12.215Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/e04c06b03fa171004708cb43970940a760b8cd428eba49d6fc65c039bc7332f9 [none]
+[debug] [2021-11-26T19:33:12.215Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/e04c06b03fa171004708cb43970940a760b8cd428eba49d6fc65c039bc7332f9 [stream]
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[debug] [2021-11-26T19:33:18.850Z] [uploadQueue] Retrying task 221ed55bf728ce29c66cdec49f766ba432e44b54f13901e8572bc08cca15173c
+[debug] [2021-11-26T19:33:18.851Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/221ed55bf728ce29c66cdec49f766ba432e44b54f13901e8572bc08cca15173c [none]
+[debug] [2021-11-26T19:33:18.852Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/221ed55bf728ce29c66cdec49f766ba432e44b54f13901e8572bc08cca15173c [stream]
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[debug] [2021-11-26T19:33:26.891Z] [uploadQueue] Retrying task dfbad13789660278089ccd0464c8ad8368adc100e6fc92df63c4f4f5cd5ed383
+[debug] [2021-11-26T19:33:26.892Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/dfbad13789660278089ccd0464c8ad8368adc100e6fc92df63c4f4f5cd5ed383 [none]
+[debug] [2021-11-26T19:33:26.892Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/dfbad13789660278089ccd0464c8ad8368adc100e6fc92df63c4f4f5cd5ed383 [stream]
+[debug] [2021-11-26T19:33:27.565Z] [uploadQueue] Retrying task cf0221d8c1255d395c50398481f26f1b3cfab3194b6adb48164999d8d2e0f8e3
+[debug] [2021-11-26T19:33:27.566Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/cf0221d8c1255d395c50398481f26f1b3cfab3194b6adb48164999d8d2e0f8e3 [none]
+[debug] [2021-11-26T19:33:27.567Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/cf0221d8c1255d395c50398481f26f1b3cfab3194b6adb48164999d8d2e0f8e3 [stream]
+[info] i  hosting: uploading new files [0/11] (0%) 
+[debug] [2021-11-26T19:33:28.212Z] [uploadQueue] Retrying task 2ce089a9c53284ab05a48d137de9b866e82c263f446f8cbe1cbc755c9d232b9d
+[debug] [2021-11-26T19:33:28.213Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/2ce089a9c53284ab05a48d137de9b866e82c263f446f8cbe1cbc755c9d232b9d [none]
+[debug] [2021-11-26T19:33:28.214Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/2ce089a9c53284ab05a48d137de9b866e82c263f446f8cbe1cbc755c9d232b9d [stream]
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[debug] [2021-11-26T19:33:32.408Z] [uploadQueue] Retrying task b39c5f4e9e39a2cf929c2365658cf3b543ddbfc205afd700d15283cb53be78ab
+[debug] [2021-11-26T19:33:32.409Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/b39c5f4e9e39a2cf929c2365658cf3b543ddbfc205afd700d15283cb53be78ab [none]
+[debug] [2021-11-26T19:33:32.409Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/b39c5f4e9e39a2cf929c2365658cf3b543ddbfc205afd700d15283cb53be78ab [stream]
+[debug] [2021-11-26T19:33:32.412Z] [uploadQueue] Retrying task 88b9fd1e3d6994414425f75d8a63a268f9b24d46f9f8fd7ff89f43ed2144462b
+[debug] [2021-11-26T19:33:32.413Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/88b9fd1e3d6994414425f75d8a63a268f9b24d46f9f8fd7ff89f43ed2144462b [none]
+[debug] [2021-11-26T19:33:32.415Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/88b9fd1e3d6994414425f75d8a63a268f9b24d46f9f8fd7ff89f43ed2144462b [stream]
+[debug] [2021-11-26T19:33:32.418Z] [uploadQueue] Retrying task aba53654304be5469856f7a9cedb4323af0962320cf071f66d30fff265b87ab4
+[debug] [2021-11-26T19:33:32.418Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/aba53654304be5469856f7a9cedb4323af0962320cf071f66d30fff265b87ab4 [none]
+[debug] [2021-11-26T19:33:32.419Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/aba53654304be5469856f7a9cedb4323af0962320cf071f66d30fff265b87ab4 [stream]
+[debug] [2021-11-26T19:33:32.420Z] [uploadQueue] Retrying task 1c623a9027af30d54d1688a1c85e534edd76c88638a1b1404c5980d5db46b899
+[debug] [2021-11-26T19:33:32.421Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/1c623a9027af30d54d1688a1c85e534edd76c88638a1b1404c5980d5db46b899 [none]
+[debug] [2021-11-26T19:33:32.422Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/1c623a9027af30d54d1688a1c85e534edd76c88638a1b1404c5980d5db46b899 [stream]
+[debug] [2021-11-26T19:33:32.424Z] [uploadQueue] Retrying task ced2642747e5082820adcd20d30ad2788ab02e62f7bf0be3ff43102dab43f64f
+[debug] [2021-11-26T19:33:32.425Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/ced2642747e5082820adcd20d30ad2788ab02e62f7bf0be3ff43102dab43f64f [none]
+[debug] [2021-11-26T19:33:32.425Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/ced2642747e5082820adcd20d30ad2788ab02e62f7bf0be3ff43102dab43f64f [stream]
+[debug] [2021-11-26T19:33:32.426Z] [uploadQueue] Retrying task 5492ccf3a87d58aacaee1d4766260c1f668174d49b87ce5fb1aa3333380d3822
+[debug] [2021-11-26T19:33:32.427Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/5492ccf3a87d58aacaee1d4766260c1f668174d49b87ce5fb1aa3333380d3822 [none]
+[debug] [2021-11-26T19:33:32.428Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/5492ccf3a87d58aacaee1d4766260c1f668174d49b87ce5fb1aa3333380d3822 [stream]
+[info] i  hosting: uploading new files [0/11] (0%) 
+[debug] [2021-11-26T19:33:34.057Z] [uploadQueue] Retrying task e04c06b03fa171004708cb43970940a760b8cd428eba49d6fc65c039bc7332f9
+[debug] [2021-11-26T19:33:34.058Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/e04c06b03fa171004708cb43970940a760b8cd428eba49d6fc65c039bc7332f9 [none]
+[debug] [2021-11-26T19:33:34.059Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/e04c06b03fa171004708cb43970940a760b8cd428eba49d6fc65c039bc7332f9 [stream]
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[debug] [2021-11-26T19:33:39.573Z] [uploadQueue] Retrying task dfbad13789660278089ccd0464c8ad8368adc100e6fc92df63c4f4f5cd5ed383
+[debug] [2021-11-26T19:33:39.574Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/dfbad13789660278089ccd0464c8ad8368adc100e6fc92df63c4f4f5cd5ed383 [none]
+[debug] [2021-11-26T19:33:39.574Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/dfbad13789660278089ccd0464c8ad8368adc100e6fc92df63c4f4f5cd5ed383 [stream]
+[debug] [2021-11-26T19:33:39.576Z] [uploadQueue] Retrying task cf0221d8c1255d395c50398481f26f1b3cfab3194b6adb48164999d8d2e0f8e3
+[debug] [2021-11-26T19:33:39.577Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/cf0221d8c1255d395c50398481f26f1b3cfab3194b6adb48164999d8d2e0f8e3 [none]
+[debug] [2021-11-26T19:33:39.577Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/cf0221d8c1255d395c50398481f26f1b3cfab3194b6adb48164999d8d2e0f8e3 [stream]
+[info] i  hosting: uploading new files [0/11] (0%) 
+[debug] [2021-11-26T19:33:40.717Z] [uploadQueue] Retrying task 221ed55bf728ce29c66cdec49f766ba432e44b54f13901e8572bc08cca15173c
+[debug] [2021-11-26T19:33:40.718Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/221ed55bf728ce29c66cdec49f766ba432e44b54f13901e8572bc08cca15173c [none]
+[debug] [2021-11-26T19:33:40.718Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/221ed55bf728ce29c66cdec49f766ba432e44b54f13901e8572bc08cca15173c [stream]
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[debug] [2021-11-26T19:34:03.382Z] [uploadQueue] Retrying task 221ed55bf728ce29c66cdec49f766ba432e44b54f13901e8572bc08cca15173c
+[debug] [2021-11-26T19:34:03.383Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/221ed55bf728ce29c66cdec49f766ba432e44b54f13901e8572bc08cca15173c [none]
+[debug] [2021-11-26T19:34:03.384Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/221ed55bf728ce29c66cdec49f766ba432e44b54f13901e8572bc08cca15173c [stream]
+[info] i  hosting: uploading new files [0/11] (0%) 
+[debug] [2021-11-26T19:34:04.021Z] [uploadQueue] Retrying task b39c5f4e9e39a2cf929c2365658cf3b543ddbfc205afd700d15283cb53be78ab
+[debug] [2021-11-26T19:34:04.022Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/b39c5f4e9e39a2cf929c2365658cf3b543ddbfc205afd700d15283cb53be78ab [none]
+[debug] [2021-11-26T19:34:04.023Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/b39c5f4e9e39a2cf929c2365658cf3b543ddbfc205afd700d15283cb53be78ab [stream]
+[debug] [2021-11-26T19:34:04.024Z] [uploadQueue] Retrying task 88b9fd1e3d6994414425f75d8a63a268f9b24d46f9f8fd7ff89f43ed2144462b
+[debug] [2021-11-26T19:34:04.025Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/88b9fd1e3d6994414425f75d8a63a268f9b24d46f9f8fd7ff89f43ed2144462b [none]
+[debug] [2021-11-26T19:34:04.025Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/88b9fd1e3d6994414425f75d8a63a268f9b24d46f9f8fd7ff89f43ed2144462b [stream]
+[debug] [2021-11-26T19:34:04.026Z] [uploadQueue] Retrying task aba53654304be5469856f7a9cedb4323af0962320cf071f66d30fff265b87ab4
+[debug] [2021-11-26T19:34:04.027Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/aba53654304be5469856f7a9cedb4323af0962320cf071f66d30fff265b87ab4 [none]
+[debug] [2021-11-26T19:34:04.027Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/aba53654304be5469856f7a9cedb4323af0962320cf071f66d30fff265b87ab4 [stream]
+[debug] [2021-11-26T19:34:04.029Z] [uploadQueue] Retrying task 1c623a9027af30d54d1688a1c85e534edd76c88638a1b1404c5980d5db46b899
+[debug] [2021-11-26T19:34:04.031Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/1c623a9027af30d54d1688a1c85e534edd76c88638a1b1404c5980d5db46b899 [none]
+[debug] [2021-11-26T19:34:04.031Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/1c623a9027af30d54d1688a1c85e534edd76c88638a1b1404c5980d5db46b899 [stream]
+[debug] [2021-11-26T19:34:04.033Z] [uploadQueue] Retrying task ced2642747e5082820adcd20d30ad2788ab02e62f7bf0be3ff43102dab43f64f
+[debug] [2021-11-26T19:34:04.034Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/ced2642747e5082820adcd20d30ad2788ab02e62f7bf0be3ff43102dab43f64f [none]
+[debug] [2021-11-26T19:34:04.035Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/ced2642747e5082820adcd20d30ad2788ab02e62f7bf0be3ff43102dab43f64f [stream]
+[debug] [2021-11-26T19:34:04.038Z] [uploadQueue] Retrying task 5492ccf3a87d58aacaee1d4766260c1f668174d49b87ce5fb1aa3333380d3822
+[debug] [2021-11-26T19:34:04.040Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/5492ccf3a87d58aacaee1d4766260c1f668174d49b87ce5fb1aa3333380d3822 [none]
+[debug] [2021-11-26T19:34:04.040Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/5492ccf3a87d58aacaee1d4766260c1f668174d49b87ce5fb1aa3333380d3822 [stream]
+[debug] [2021-11-26T19:34:04.616Z] [uploadQueue] Retrying task 2ce089a9c53284ab05a48d137de9b866e82c263f446f8cbe1cbc755c9d232b9d
+[debug] [2021-11-26T19:34:04.617Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/2ce089a9c53284ab05a48d137de9b866e82c263f446f8cbe1cbc755c9d232b9d [none]
+[debug] [2021-11-26T19:34:04.618Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/2ce089a9c53284ab05a48d137de9b866e82c263f446f8cbe1cbc755c9d232b9d [stream]
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[debug] [2021-11-26T19:34:12.797Z] [uploadQueue] Retrying task dfbad13789660278089ccd0464c8ad8368adc100e6fc92df63c4f4f5cd5ed383
+[debug] [2021-11-26T19:34:12.799Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/dfbad13789660278089ccd0464c8ad8368adc100e6fc92df63c4f4f5cd5ed383 [none]
+[debug] [2021-11-26T19:34:12.799Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/dfbad13789660278089ccd0464c8ad8368adc100e6fc92df63c4f4f5cd5ed383 [stream]
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[debug] [2021-11-26T19:34:16.280Z] [uploadQueue] Retrying task e04c06b03fa171004708cb43970940a760b8cd428eba49d6fc65c039bc7332f9
+[debug] [2021-11-26T19:34:16.281Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/e04c06b03fa171004708cb43970940a760b8cd428eba49d6fc65c039bc7332f9 [none]
+[debug] [2021-11-26T19:34:16.282Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/e04c06b03fa171004708cb43970940a760b8cd428eba49d6fc65c039bc7332f9 [stream]
+[debug] [2021-11-26T19:34:16.894Z] [uploadQueue] Retrying task cf0221d8c1255d395c50398481f26f1b3cfab3194b6adb48164999d8d2e0f8e3
+[debug] [2021-11-26T19:34:16.895Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/cf0221d8c1255d395c50398481f26f1b3cfab3194b6adb48164999d8d2e0f8e3 [none]
+[debug] [2021-11-26T19:34:16.895Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/cf0221d8c1255d395c50398481f26f1b3cfab3194b6adb48164999d8d2e0f8e3 [stream]
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[debug] [2021-11-26T19:34:24.125Z] [uploadQueue] Retrying task 88b9fd1e3d6994414425f75d8a63a268f9b24d46f9f8fd7ff89f43ed2144462b
+[debug] [2021-11-26T19:34:24.126Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/88b9fd1e3d6994414425f75d8a63a268f9b24d46f9f8fd7ff89f43ed2144462b [none]
+[debug] [2021-11-26T19:34:24.127Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/88b9fd1e3d6994414425f75d8a63a268f9b24d46f9f8fd7ff89f43ed2144462b [stream]
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[debug] [2021-11-26T19:34:30.346Z] [uploadQueue] Retrying task aba53654304be5469856f7a9cedb4323af0962320cf071f66d30fff265b87ab4
+[debug] [2021-11-26T19:34:30.347Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/aba53654304be5469856f7a9cedb4323af0962320cf071f66d30fff265b87ab4 [none]
+[debug] [2021-11-26T19:34:30.347Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/aba53654304be5469856f7a9cedb4323af0962320cf071f66d30fff265b87ab4 [stream]
+[debug] [2021-11-26T19:34:30.349Z] [uploadQueue] Retrying task 5492ccf3a87d58aacaee1d4766260c1f668174d49b87ce5fb1aa3333380d3822
+[debug] [2021-11-26T19:34:30.350Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/5492ccf3a87d58aacaee1d4766260c1f668174d49b87ce5fb1aa3333380d3822 [none]
+[debug] [2021-11-26T19:34:30.350Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/5492ccf3a87d58aacaee1d4766260c1f668174d49b87ce5fb1aa3333380d3822 [stream]
+[debug] [2021-11-26T19:34:30.394Z] [uploadQueue] Retrying task 2ce089a9c53284ab05a48d137de9b866e82c263f446f8cbe1cbc755c9d232b9d
+[debug] [2021-11-26T19:34:30.396Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/2ce089a9c53284ab05a48d137de9b866e82c263f446f8cbe1cbc755c9d232b9d [none]
+[debug] [2021-11-26T19:34:30.397Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/2ce089a9c53284ab05a48d137de9b866e82c263f446f8cbe1cbc755c9d232b9d [stream]
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[debug] [2021-11-26T19:34:35.163Z] [uploadQueue] Retrying task 1c623a9027af30d54d1688a1c85e534edd76c88638a1b1404c5980d5db46b899
+[debug] [2021-11-26T19:34:35.164Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/1c623a9027af30d54d1688a1c85e534edd76c88638a1b1404c5980d5db46b899 [none]
+[debug] [2021-11-26T19:34:35.164Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/1c623a9027af30d54d1688a1c85e534edd76c88638a1b1404c5980d5db46b899 [stream]
+[debug] [2021-11-26T19:34:35.177Z] [uploadQueue] Retrying task ced2642747e5082820adcd20d30ad2788ab02e62f7bf0be3ff43102dab43f64f
+[debug] [2021-11-26T19:34:35.178Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/ced2642747e5082820adcd20d30ad2788ab02e62f7bf0be3ff43102dab43f64f [none]
+[debug] [2021-11-26T19:34:35.179Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/ced2642747e5082820adcd20d30ad2788ab02e62f7bf0be3ff43102dab43f64f [stream]
+[debug] [2021-11-26T19:34:35.193Z] [uploadQueue] Retrying task b39c5f4e9e39a2cf929c2365658cf3b543ddbfc205afd700d15283cb53be78ab
+[debug] [2021-11-26T19:34:35.194Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/b39c5f4e9e39a2cf929c2365658cf3b543ddbfc205afd700d15283cb53be78ab [none]
+[debug] [2021-11-26T19:34:35.195Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/b39c5f4e9e39a2cf929c2365658cf3b543ddbfc205afd700d15283cb53be78ab [stream]
+[debug] [2021-11-26T19:34:35.209Z] [uploadQueue] Retrying task 221ed55bf728ce29c66cdec49f766ba432e44b54f13901e8572bc08cca15173c
+[debug] [2021-11-26T19:34:35.211Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/221ed55bf728ce29c66cdec49f766ba432e44b54f13901e8572bc08cca15173c [none]
+[debug] [2021-11-26T19:34:35.211Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/221ed55bf728ce29c66cdec49f766ba432e44b54f13901e8572bc08cca15173c [stream]
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[debug] [2021-11-26T19:34:40.258Z] [uploadQueue] Retrying task dfbad13789660278089ccd0464c8ad8368adc100e6fc92df63c4f4f5cd5ed383
+[debug] [2021-11-26T19:34:40.259Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/dfbad13789660278089ccd0464c8ad8368adc100e6fc92df63c4f4f5cd5ed383 [none]
+[debug] [2021-11-26T19:34:40.260Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/dfbad13789660278089ccd0464c8ad8368adc100e6fc92df63c4f4f5cd5ed383 [stream]
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[info] i  hosting: uploading new files [0/11] (0%) 
+[debug] [2021-11-26T19:34:57.415Z] [uploadQueue] Retrying task cf0221d8c1255d395c50398481f26f1b3cfab3194b6adb48164999d8d2e0f8e3
+[debug] [2021-11-26T19:34:57.416Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/cf0221d8c1255d395c50398481f26f1b3cfab3194b6adb48164999d8d2e0f8e3 [none]
+[debug] [2021-11-26T19:34:57.417Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/cf0221d8c1255d395c50398481f26f1b3cfab3194b6adb48164999d8d2e0f8e3 [stream]
+[info] i  hosting: uploading new files [0/11] (0%) 
+[debug] [2021-11-26T19:35:00.112Z] [uploadQueue] Retrying task e04c06b03fa171004708cb43970940a760b8cd428eba49d6fc65c039bc7332f9
+[debug] [2021-11-26T19:35:00.113Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/e04c06b03fa171004708cb43970940a760b8cd428eba49d6fc65c039bc7332f9 [none]
+[debug] [2021-11-26T19:35:00.114Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/e04c06b03fa171004708cb43970940a760b8cd428eba49d6fc65c039bc7332f9 [stream]
+[info] i  hosting: uploading new files [0/11] (0%) 
+[debug] [2021-11-26T19:35:00.535Z] [uploadQueue] Retrying task 88b9fd1e3d6994414425f75d8a63a268f9b24d46f9f8fd7ff89f43ed2144462b
+[debug] [2021-11-26T19:35:00.536Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/88b9fd1e3d6994414425f75d8a63a268f9b24d46f9f8fd7ff89f43ed2144462b [none]
+[debug] [2021-11-26T19:35:00.537Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/88b9fd1e3d6994414425f75d8a63a268f9b24d46f9f8fd7ff89f43ed2144462b [stream]
+[debug] Task dfbad13789660278089ccd0464c8ad8368adc100e6fc92df63c4f4f5cd5ed383 failed: retries exhausted after 6 attempts, with error: Failed to make request to https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/dfbad13789660278089ccd0464c8ad8368adc100e6fc92df63c4f4f5cd5ed383
+[debug] [2021-11-26T19:35:01.302Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":10,"complete":1,"success":0,"errored":1,"retried":47,"total":11,"elapsed":150121}
+[debug] [2021-11-26T19:35:06.761Z] [uploadQueue] Retrying task aba53654304be5469856f7a9cedb4323af0962320cf071f66d30fff265b87ab4
+[debug] [2021-11-26T19:35:06.762Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/aba53654304be5469856f7a9cedb4323af0962320cf071f66d30fff265b87ab4 [none]
+[debug] [2021-11-26T19:35:06.763Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/aba53654304be5469856f7a9cedb4323af0962320cf071f66d30fff265b87ab4 [stream]
+[debug] [2021-11-26T19:35:06.765Z] [uploadQueue] Retrying task 5492ccf3a87d58aacaee1d4766260c1f668174d49b87ce5fb1aa3333380d3822
+[debug] [2021-11-26T19:35:06.766Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/5492ccf3a87d58aacaee1d4766260c1f668174d49b87ce5fb1aa3333380d3822 [none]
+[debug] [2021-11-26T19:35:06.766Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/5492ccf3a87d58aacaee1d4766260c1f668174d49b87ce5fb1aa3333380d3822 [stream]
+[debug] [2021-11-26T19:35:11.579Z] [uploadQueue] Retrying task 1c623a9027af30d54d1688a1c85e534edd76c88638a1b1404c5980d5db46b899
+[debug] [2021-11-26T19:35:11.580Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/1c623a9027af30d54d1688a1c85e534edd76c88638a1b1404c5980d5db46b899 [none]
+[debug] [2021-11-26T19:35:11.581Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/1c623a9027af30d54d1688a1c85e534edd76c88638a1b1404c5980d5db46b899 [stream]
+[debug] [2021-11-26T19:35:11.585Z] [uploadQueue] Retrying task 2ce089a9c53284ab05a48d137de9b866e82c263f446f8cbe1cbc755c9d232b9d
+[debug] [2021-11-26T19:35:11.586Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/2ce089a9c53284ab05a48d137de9b866e82c263f446f8cbe1cbc755c9d232b9d [none]
+[debug] [2021-11-26T19:35:11.587Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/2ce089a9c53284ab05a48d137de9b866e82c263f446f8cbe1cbc755c9d232b9d [stream]
+[debug] [2021-11-26T19:35:11.589Z] [uploadQueue] Retrying task ced2642747e5082820adcd20d30ad2788ab02e62f7bf0be3ff43102dab43f64f
+[debug] [2021-11-26T19:35:11.590Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/ced2642747e5082820adcd20d30ad2788ab02e62f7bf0be3ff43102dab43f64f [none]
+[debug] [2021-11-26T19:35:11.590Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/ced2642747e5082820adcd20d30ad2788ab02e62f7bf0be3ff43102dab43f64f [stream]
+[debug] [2021-11-26T19:35:11.610Z] [uploadQueue] Retrying task b39c5f4e9e39a2cf929c2365658cf3b543ddbfc205afd700d15283cb53be78ab
+[debug] [2021-11-26T19:35:11.611Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/b39c5f4e9e39a2cf929c2365658cf3b543ddbfc205afd700d15283cb53be78ab [none]
+[debug] [2021-11-26T19:35:11.612Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/b39c5f4e9e39a2cf929c2365658cf3b543ddbfc205afd700d15283cb53be78ab [stream]
+[debug] [2021-11-26T19:35:23.800Z] FirebaseError: Failed to make request to https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/dfbad13789660278089ccd0464c8ad8368adc100e6fc92df63c4f4f5cd5ed383
+    at Client.doRequest (C:\Users\akhil\AppData\Roaming\nvm\v14.18.0\node_modules\firebase-tools\lib\apiv2.js:213:19)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async Client.request (C:\Users\akhil\AppData\Roaming\nvm\v14.18.0\node_modules\firebase-tools\lib\apiv2.js:96:20)
+    at async Uploader.uploadHandler (C:\Users\akhil\AppData\Roaming\nvm\v14.18.0\node_modules\firebase-tools\lib\deploy\hosting\uploader.js:179:21)
+    at async Queue.executeTask (C:\Users\akhil\AppData\Roaming\nvm\v14.18.0\node_modules\firebase-tools\lib\throttler\throttler.js:180:22)
+    at async Queue.handle (C:\Users\akhil\AppData\Roaming\nvm\v14.18.0\node_modules\firebase-tools\lib\throttler\throttler.js:96:22)
+[error] 
+[error] Error: Task dfbad13789660278089ccd0464c8ad8368adc100e6fc92df63c4f4f5cd5ed383 failed: retries exhausted after 6 attempts, with error: Failed to make request to https://upload-firebasehosting.googleapis.com/upload/sites/advent-calendar-f3e42/versions/13b3f985c9577043/files/dfbad13789660278089ccd0464c8ad8368adc100e6fc92df63c4f4f5cd5ed383
