@@ -28,6 +28,11 @@ function MainBackground() {
                     className='animation'
                 />
             ))}
+            {/* <img
+                src='/assets/title.png'
+                alt='fontana title'
+                className='title'
+            /> */}
         </BgContainer>
     );
 }
@@ -36,36 +41,43 @@ export default MainBackground;
 
 const BgContainer = styled.div`
     height: 100vh;
-    img {
-        /* position: relative; */
+    img,
+    .animation {
         width: 700px;
+        height: 100vh;
         display: block;
     }
 
     .animation {
-        display: block;
-        width: 700px;
+        object-fit: fill;
         position: absolute;
         top: 0;
         left: 0;
     }
+    .title {
+        display: block;
+        bottom: 0;
+        right: 0;
+        position: fixed;
+        width: 30%;
+        height: 30%;
+    }
 
     @media all and (min-width: 469px) {
-        img {
+        img,
+        .animation {
+            display: block;
             width: 100%;
             max-width: 2000px;
             height: 100%;
             max-height: 2000px;
             object-fit: fill;
         }
-        .animation {
-            width: 100%;
-            max-width: 2000px;
-            height: 100%;
-            max-height: 2000px;
-            object-fit: fill;
+       
 
-            /* display: block; */
+        .title {
+            width: 30%;
+            height: 30%;
         }
     }
 `;
