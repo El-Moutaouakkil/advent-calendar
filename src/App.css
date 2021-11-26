@@ -12,6 +12,8 @@ body {
 body {
     /* border: 5px solid crimson; */
     background-color: lightgray;
+    /* overflow-x: hidden; */
+    overflow-y: hidden;
 }
 
 html {
