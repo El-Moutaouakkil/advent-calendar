@@ -18,7 +18,7 @@ function MainBackground() {
     ];
 
     const titleRef = useRef();
-   /*  useEffect(() => {
+    /*  useEffect(() => {
         const body = document.querySelector("body");
         window.addEventListener("scroll", () => {
             let scrollPosition = window.scrollX;
@@ -53,11 +53,13 @@ function MainBackground() {
 
 export default MainBackground;
 
-
 const BgContainer = styled.div`
-   
+    img {
+        display: block;
+        border: 4px solid black;
+        height: 2670px;
+    }
 
-    @media all and (max-width: 469px) {
-        
-           }
+    @media all and (max-width: 468px) {
+    }
 `;
