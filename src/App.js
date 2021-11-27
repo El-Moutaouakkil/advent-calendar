@@ -21,7 +21,7 @@ function App() {
 
 export default App;
 const IconContainer = styled.div`
-    width: 100vw;
+    /* width: 100vw;
     height: 50vh;
     background-color: lightcoral;
     position: relative;
@@ -33,5 +33,5 @@ const IconContainer = styled.div`
         position: absolute;
         top: 0;
         left: 10em;
-    }
+    } */
 `;

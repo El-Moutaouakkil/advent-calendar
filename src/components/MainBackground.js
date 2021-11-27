@@ -56,10 +56,16 @@ export default MainBackground;
 const BgContainer = styled.div`
     img {
         display: block;
-        border: 4px solid black;
-        height: 2670px;
+        width: 100%;
+        max-width: 1920px;
+        /* height: 1920px; */
     }
 
-    @media all and (max-width: 468px) {
+    @media all and (max-width: 1024px) and (orientation: portrait) {
+        img {
+            height: 100vh;
+            width: auto;
+            /* height : auto; */
+        }
     }
 `;
