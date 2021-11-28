@@ -18,16 +18,7 @@ function MainBackground() {
     ];
 
     const titleRef = useRef();
-    /*  useEffect(() => {
-        const body = document.querySelector("body");
-        window.addEventListener("scroll", () => {
-            let scrollPosition = window.scrollX;
-            if (scrollPosition <= 230 && titleRef?.current) {
-                titleRef.current.classList.add("onScroll");
-            } else titleRef.current.classList.remove("onScroll");
-        });
-    }, []); */
-
+    
     return (
         <BgContainer>
             <img src='/assets/map.jpg' alt='main background' />
