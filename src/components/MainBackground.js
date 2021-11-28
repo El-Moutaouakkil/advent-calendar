@@ -21,8 +21,7 @@ function MainBackground() {
     const titleRef = useRef();
     useEffect(() => {
         setShowSnow(true);
-       
-    }, [])
+    }, []);
 
     return (
         <BgContainer>
@@ -41,8 +40,7 @@ function MainBackground() {
                 alt='fontana title'
                 className='title'
             />
-               showSnow &&  <Snowfall snowflakeCount={250}/>
-         
+            showSnow && <Snowfall snowflakeCount={175} />
         </BgContainer>
     );
 }
