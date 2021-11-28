@@ -6,7 +6,7 @@ function MainBackground() {
     const animations = [
         "albero",
         // "casette",
-        // "fontana",
+        "fontana",
         // "forziere",
         // "luci_banca",
         // "luci_centro",
@@ -31,14 +31,14 @@ function MainBackground() {
     return (
         <BgContainer>
             <img src='/assets/map.jpg' alt='main background' />
-            {/* {animations.map((animation, index) => (
+            {animations.map((animation, index) => (
                 <Animation
                     key={"" + index}
                     src={`/assets/gifs/${animation}.gif`}
                     type='webm'
-                    className='animation'
+                    className={`animation ${animation}`}
                 />
-            ))} */}
+            ))}
             {/* <img
                 ref={titleRef}
                 src='/assets/title.png'
@@ -60,12 +60,59 @@ const BgContainer = styled.div`
         max-width: 1920px;
         /* height: 1920px; */
     }
+    .animation {
+        /* border : 2px dashed black; */
+        position: absolute;
+    }
+    .albero {
+        width: 14vw;
+        height: 16vw;
+        top: 25vw;
+        left: 33vw;
+    }
+    .fontana {
+        width: 8.4vw;
+        height: 10.4vw;
+        top: 36.8vw;
+        left: 74.5vw;
+    }
 
     @media all and (max-width: 1024px) and (orientation: portrait) {
         img {
             height: 100vh;
             width: auto;
             /* height : auto; */
+        }
+        .animation {
+        }
+        .albero {
+            width: 14vh;
+            height: 16vh;
+            top: 25vh;
+            left: 33vh;
+        }
+        .fontana {
+            width: 8.4vh;
+            height: 10.4vh;
+            top: 37.3vh;
+            left: 75.5vh;
+        }
+    }
+
+    @media all and (max-width: 1024px) and (orientation: landscape) {
+        .fontana {
+            /* width: 8.4vw;
+            height: 10.4vw; */
+            top: 37.3vw;
+            left: 75.5vw;
+        }
+    }
+    @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: landscape) {
+        .fontana {
+            /* width: 8.4vw;
+            height: 10.4vw; */
+            top: 37.3vw;
+            left: 75.5vw;
         }
     }
 `;

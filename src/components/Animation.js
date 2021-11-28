@@ -10,3 +10,5 @@ function Animation({ src, type, className }) {
 }
 
 export default Animation;
+
+
