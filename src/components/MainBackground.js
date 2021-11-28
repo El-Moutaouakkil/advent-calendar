@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import Animation from "./Animation";
+import Snowfall from "react-snowfall";
 
 function MainBackground() {
     const animations = [
@@ -44,8 +45,7 @@ function MainBackground() {
                 alt='fontana title'
                 className='title'
             />
-
-            {/* <p>This is a title</p> */}
+            <Snowfall snowflakeCount={250} />
         </BgContainer>
     );
 }
