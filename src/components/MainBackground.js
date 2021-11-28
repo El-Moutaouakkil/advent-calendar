@@ -40,7 +40,11 @@ function MainBackground() {
                 alt='fontana title'
                 className='title'
             />
-            showSnow && <Snowfall snowflakeCount={175} />
+            {showSnow && (
+                <div className='SnowContainer'>
+                    <Snowfall snowflakeCount={175} />
+                </div>
+            )}
         </BgContainer>
     );
 }
