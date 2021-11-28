@@ -38,12 +38,12 @@ function MainBackground() {
                     className={`animation ${animation}`}
                 />
             ))}
-            {/* <img
+            <img
                 ref={titleRef}
                 src='/assets/title.png'
                 alt='fontana title'
                 className='title'
-            /> */}
+            />
 
             {/* <p>This is a title</p> */}
         </BgContainer>
@@ -59,9 +59,16 @@ const BgContainer = styled.div`
         max-width: 1920px;
         /* height: 1920px; */
     }
-    .animation {
+    .animation,
+    .title {
         /* border : 2px dashed black; */
         position: absolute;
+    }
+    .title {
+        bottom: 4vw;
+        right: 4vw;
+        width: 30vw;
+        height: auto;
     }
     .albero {
         width: 14vw;
@@ -135,6 +142,12 @@ const BgContainer = styled.div`
             /* height : auto; */
         }
         .animation {
+        }
+        .title {
+            bottom: 6vh;
+            left: 65vh;
+            width: 30vh;
+            height: auto;
         }
         .albero {
             width: 14vh;
