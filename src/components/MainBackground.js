@@ -1,9 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import Animation from "./Animation";
 import Snowfall from "react-snowfall";
 
 function MainBackground() {
+    const [showSnow, setShowSnow] = useState(false);
     const animations = [
         "albero",
         "casette",
@@ -18,7 +19,11 @@ function MainBackground() {
     ];
 
     const titleRef = useRef();
-    
+    useEffect(() => {
+        setShowSnow(true);
+       
+    }, [])
+
     return (
         <BgContainer>
             <img src='/assets/map.jpg' alt='main background' />
@@ -36,7 +41,8 @@ function MainBackground() {
                 alt='fontana title'
                 className='title'
             />
-            <Snowfall snowflakeCount={250} />
+               showSnow &&  <Snowfall snowflakeCount={250}/>
+         
         </BgContainer>
     );
 }
@@ -222,4 +228,8 @@ const BgContainer = styled.div`
     /* fix fontana display on Ipad pro lanscape mode */
     /* fix forziere display on Ipad pro lanscape mode */
     /* fix luci-dx-top display on Ipad pro lanscape mode */
+`;
+
+const SnowContainer = styled.div`
+    /* height: 100vh; */
 `;
