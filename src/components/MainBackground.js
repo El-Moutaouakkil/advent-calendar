@@ -73,11 +73,11 @@ const BgContainer = styled.div`
     .fontana {
         width: 8.4vw;
         height: 10.4vw;
-        top: 36.8vw;
-        left: 74.5vw;
+        top: 36.6vw;
+        right: 15.8vw;
     }
 
-    @media all and (max-width: 1024px) and (orientation: portrait) {
+    @media screen and (max-width: 1024px) and (orientation: portrait) {
         img {
             height: 100vh;
             width: auto;
@@ -99,20 +99,17 @@ const BgContainer = styled.div`
         }
     }
 
-    @media all and (max-width: 1024px) and (orientation: landscape) {
+    @media screen and (max-width: 1024px) and (orientation: landscape) {
+        .animation {
+        }
+
         .fontana {
-            /* width: 8.4vw;
-            height: 10.4vw; */
+            width: 8.4vw;
+            height: 10.4vw;
             top: 37.3vw;
-            left: 75.5vw;
+            right: 16vw;
         }
     }
-    @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: landscape) {
-        .fontana {
-            /* width: 8.4vw;
-            height: 10.4vw; */
-            top: 37.3vw;
-            left: 75.5vw;
-        }
-    }
+    //FIXME: 
+    /* fix fontana display on ipad pro lanscape mode */
 `;
