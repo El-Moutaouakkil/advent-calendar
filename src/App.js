@@ -8,6 +8,8 @@ import styled from "styled-components";
 function App() {
     return (
         <div className='App'>
+            {/* <h1>title</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis voluptate, ipsum quia minus reprehenderit est?</p> */}
             <MainBackground />
             {/* <IconContainer>
                 <FontAwesomeIcon icon={faStar} color='orange' size='lg' />

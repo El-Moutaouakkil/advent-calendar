@@ -6,20 +6,22 @@
 
 html,
 body {
-        
+    max-width: 1920px;
+    /* max-width: 1000px; */
+    /* overflow-x: hidden; */
 }
 html {
     /* height: 100vh; */
     /* border: 5px solid crimson; */
 
-    background-color: black;
+    /* background-color: black; */
 }
 body {
     /* overflow: hidden; */
     position: relative;
 }
 
-@media (max-width: 1024px) and (orientation:portrait) {
+@media (max-width: 1024px) and (orientation: portrait) {
     html,
     body {
         /* background: #000; */
@@ -31,5 +33,3 @@ body {
         /* overflow-x: hidden; */
     }
 }
-
-
