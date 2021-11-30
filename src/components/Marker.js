@@ -78,6 +78,7 @@ const MarkerContainer = styled.div`
         width: ${({ isMobileScreen }) =>
             isMobileScreen ? 2 + "vh" : 2 + "vw"};
         height: auto;
+        filter: drop-shadow(1px 1px 1px lightgray)
     }
 
     top: ${({ isMobileScreen, top }) =>

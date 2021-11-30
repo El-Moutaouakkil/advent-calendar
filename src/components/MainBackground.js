@@ -32,13 +32,13 @@ function MainBackground() {
             left: "6",
         },
         {
-            dates: ["4/12"],
+            dates: ["04/12"],
             link: "www.luganoeventi.ch/it/calendario-avvento-4-x",
             top: "47",
             left: "15",
         },
         {
-            dates: ["7/12", "16/12"],
+            dates: ["07/12", "16/12"],
             link: "www.luganoeventi.ch/it/calendario-avvento-7-u",
             top: "41",
             left: "25",
@@ -49,31 +49,67 @@ function MainBackground() {
             top: "57.5",
             left: "32",
         },
+        {
+            dates: ["08/12", "19/12"],
+            link: "www.luganoeventi.ch/it/calendario-avvento-8-t",
+            top: "65",
+            left: "40",
+        },
+        {
+            dates: ["02/12"],
+            link: "www.luganoeventi.ch/it/calendario-avvento-2-w",
+            top: "60",
+            left: "52",
+        },
+        {
+            dates: ["05/12", "25/12"],
+            link: "www.luganoeventi.ch/it/calendario-avvento-5-z",
+            top: "49",
+            left: "46.5",
+        },
+        {
+            dates: ["10/12", "22/12"],
+            link: "www.luganoeventi.ch/it/calendario-avvento-10-r",
+            top: "34",
+            left: "43",
+        },
+        {
+            dates: ["03/12", "18/12"],
+            link: "www.luganoeventi.ch/it/calendario-avvento-3-y",
+            top: "16.5",
+            left: "37.7",
+        },
+        {
+            dates: ["12/12", "20/12"],
+            link: "www.luganoeventi.ch/it/calendario-avvento-12-p",
+            top: "14",
+            left: "63.5",
+        },
+        {
+            dates: ["06/12", "23/12"],
+            link: "www.luganoeventi.ch/it/calendario-avvento-6-v",
+            top: "27",
+            left: "77",
+        },
+        {
+            dates: ["14/12"],
+            link: "www.luganoeventi.ch/it/calendario-avvento-14-n",
+            top: "36",
+            left: "73",
+        },
+        {
+            dates: ["09/12"],
+            link: "www.luganoeventi.ch/it/calendario-avvento-9-s",
+            top: "45.7",
+            left: "68",
+        },
+        {
+            dates: ["01/12", "17/12"],
+            link: "www.luganoeventi.ch/it/calendario-avvento-1-j",
+            top: "44",
+            left: "83.5",
+        },
     ];
-
-    /* 
-    www.luganoeventi.ch/it/calendario-avvento-1-j
-www.luganoeventi.ch/it/calendario-avvento-2-w
-www.luganoeventi.ch/it/calendario-avvento-3-y
-www.luganoeventi.ch/it/calendario-avvento-5-z
-www.luganoeventi.ch/it/calendario-avvento-6-v
-www.luganoeventi.ch/it/calendario-avvento-8-t
-www.luganoeventi.ch/it/calendario-avvento-9-s
-www.luganoeventi.ch/it/calendario-avvento-10-r
-www.luganoeventi.ch/it/calendario-avvento-12-p
-www.luganoeventi.ch/it/calendario-avvento-14-n
-www.luganoeventi.ch/it/calendario-avvento-16-l
-www.luganoeventi.ch/it/calendario-avvento-17-i
-www.luganoeventi.ch/it/calendario-avvento-18-h
-www.luganoeventi.ch/it/calendario-avvento-19-g
-www.luganoeventi.ch/it/calendario-avvento-20-f
-www.luganoeventi.ch/it/calendario-avvento-21-e
-www.luganoeventi.ch/it/calendario-avvento-22-d
-www.luganoeventi.ch/it/calendario-avvento-23-c
-www.luganoeventi.ch/it/calendario-avvento-24-b
-www.luganoeventi.ch/it/calendario-avvento-25-a
-
-    */
 
     const titleRef = useRef();
     useEffect(() => {
@@ -97,7 +133,15 @@ www.luganoeventi.ch/it/calendario-avvento-25-a
                 alt='fontana title'
                 className='title'
             />
-            <Marker top='65' left='40' link='#a link goes here ' />
+            {markerProps.map((marker, index) => (
+                <Marker
+                    key={index + ""}
+                    top={marker.top}
+                    left={marker.left}
+                    link={marker.link}
+                />
+            ))}
+            {/* <Marker top='44' left='83.5' link='#a link goes here ' /> */}
 
             {showSnow && (
                 <div className='SnowContainer'>
