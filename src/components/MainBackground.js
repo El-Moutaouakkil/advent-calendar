@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import Animation from "./Animation";
 import Snowfall from "react-snowfall";
+import Marker from "./Marker";
 
 function MainBackground() {
     const [showSnow, setShowSnow] = useState(false);
@@ -17,6 +18,62 @@ function MainBackground() {
         "luci_dx_top",
         "tetto",
     ];
+    const markerProps = [
+        {
+            dates: ["15/12", "21/12"],
+            link: "www.luganoeventi.ch/it/calendario-avvento-15-m",
+            top: "83",
+            left: "8.5",
+        },
+        {
+            dates: ["11/12", "24/12"],
+            link: "www.luganoeventi.ch/it/calendario-avvento-11-q",
+            top: "60.5",
+            left: "6",
+        },
+        {
+            dates: ["4/12"],
+            link: "www.luganoeventi.ch/it/calendario-avvento-4-x",
+            top: "47",
+            left: "15",
+        },
+        {
+            dates: ["7/12", "16/12"],
+            link: "www.luganoeventi.ch/it/calendario-avvento-7-u",
+            top: "41",
+            left: "25",
+        },
+        {
+            dates: ["13/12"],
+            link: "www.luganoeventi.ch/it/calendario-avvento-13-o",
+            top: "57.5",
+            left: "32",
+        },
+    ];
+
+    /* 
+    www.luganoeventi.ch/it/calendario-avvento-1-j
+www.luganoeventi.ch/it/calendario-avvento-2-w
+www.luganoeventi.ch/it/calendario-avvento-3-y
+www.luganoeventi.ch/it/calendario-avvento-5-z
+www.luganoeventi.ch/it/calendario-avvento-6-v
+www.luganoeventi.ch/it/calendario-avvento-8-t
+www.luganoeventi.ch/it/calendario-avvento-9-s
+www.luganoeventi.ch/it/calendario-avvento-10-r
+www.luganoeventi.ch/it/calendario-avvento-12-p
+www.luganoeventi.ch/it/calendario-avvento-14-n
+www.luganoeventi.ch/it/calendario-avvento-16-l
+www.luganoeventi.ch/it/calendario-avvento-17-i
+www.luganoeventi.ch/it/calendario-avvento-18-h
+www.luganoeventi.ch/it/calendario-avvento-19-g
+www.luganoeventi.ch/it/calendario-avvento-20-f
+www.luganoeventi.ch/it/calendario-avvento-21-e
+www.luganoeventi.ch/it/calendario-avvento-22-d
+www.luganoeventi.ch/it/calendario-avvento-23-c
+www.luganoeventi.ch/it/calendario-avvento-24-b
+www.luganoeventi.ch/it/calendario-avvento-25-a
+
+    */
 
     const titleRef = useRef();
     useEffect(() => {
@@ -40,6 +97,8 @@ function MainBackground() {
                 alt='fontana title'
                 className='title'
             />
+            <Marker top='65' left='40' link='#a link goes here ' />
+
             {showSnow && (
                 <div className='SnowContainer'>
                     <Snowfall snowflakeCount={175} />
