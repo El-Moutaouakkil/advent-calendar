@@ -141,7 +141,7 @@ function MainBackground() {
 
     return (
         <BgContainer>
-            <video autoPlay loop muted playsinline className='map-video'>
+            <video autoPlay loop muted playsInline className='map-video'>
                 <source src='/assets/map.mp4' type='video/mp4'></source>
             </video>
             {/* <img src='/assets/map.jpg' alt='main background' />
