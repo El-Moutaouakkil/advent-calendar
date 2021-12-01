@@ -31,11 +31,12 @@ function Marker({ link, top, left }) {
                     href={link}
                     className='starContainer'
                     onClick={handleStarClick}>
-                    <img
+                    <h1 className='star-icon'>star</h1>
+                    {/* <img
                         src='/assets/star.svg'
                         className='star-icon'
                         alt='staricon'
-                    />
+                    /> */}
                 </a>
                 {/* {`window dimensions are : ${width}px x ${height}px`}
             <h2>{isMobileScreen ? "mobile screen" : "Desktop screen"}</h2> */}
