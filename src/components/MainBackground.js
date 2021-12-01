@@ -142,7 +142,7 @@ function MainBackground() {
     return (
         <BgContainer>
             <video autoPlay loop muted className='map-video'>
-                <source src='/map.mp4' type='video/mp4'></source>
+                <source src='/assets/map.mp4' type='video/mp4'></source>
             </video>
             {/* <img src='/assets/map.jpg' alt='main background' />
             {animations.map((animation, index) => (
