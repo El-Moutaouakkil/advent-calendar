@@ -6,10 +6,15 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
 import Marker from "./components/Marker";
 import Modal from "./components/Modal";
+import Snowfall from "react-snowfall";
 
 function App() {
     return (
         <div className='App'>
+           
+            {/* <SnowContainer>
+                <Snowfall />
+            </SnowContainer> */}
             <MainBackground />
             {/* <div className="modal"></div> */}
             {/* <div className='modal'>
@@ -20,3 +25,7 @@ function App() {
 }
 
 export default App;
+const SnowContainer = styled.div`
+    width: 100vw;
+`;
+

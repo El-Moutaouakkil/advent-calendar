@@ -141,7 +141,7 @@ function MainBackground() {
 
     return (
         <BgContainer>
-            <video autoPlay loop muted className='map-video'>
+            <video autoPlay loop muted playsinline className='map-video'>
                 <source src='/assets/map.mp4' type='video/mp4'></source>
             </video>
             {/* <img src='/assets/map.jpg' alt='main background' />
@@ -210,17 +210,25 @@ function MainBackground() {
                 />
             ))} */}
             {showSnow && (
-                <div className='SnowContainer'>
-                    <Snowfall snowflakeCount={175} />
-                </div>
+                <SnowContainer>
+                    <Snowfall
+                        snowflakeCount={175}
+                        style={
+                            {
+                                /* background: "rgba(0,0,0,.5)" */
+                            }
+                        }
+                    />
+                </SnowContainer>
             )}
+            {/* <div className='snowtest'>asdasdasdasdasdasd</div> */}
         </BgContainer>
     );
 }
 
 export default MainBackground;
-
 const BgContainer = styled.div`
+    cursor: grab;
     .close {
         width: 20px;
         /* max-width: calc((2.5vw * 1920px) / 100vw); */
@@ -236,7 +244,7 @@ const BgContainer = styled.div`
         max-width: 1920px; */
         /* height: 1920px; */
     }
-    .map-video{
+    .map-video {
         display: block;
         width: 100%;
         /* max-width: 1920px; */
@@ -252,15 +260,19 @@ const BgContainer = styled.div`
         width: 30vw;
         height: auto;
     }
-    
+    .snowtest {
+        position: absolute;
+        top: 0;
+        left: 0;
     }
+
     @media screen and (max-width: 1024px) and (orientation: portrait) {
         img {
             /* height: 100vh;
             width: auto; */
             /* height : auto; */
         }
-        .map-video{
+        .map-video {
             height: 100vh;
             width: auto;
             /* max-height: 2000px; */
@@ -276,21 +288,19 @@ const BgContainer = styled.div`
             width: 30vh;
             height: auto;
         }
-        
+        .snowtest {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 300px;
+            background-color: red;
+        }
     }
 
     @media screen and (max-width: 1024px) and (orientation: landscape) {
         .animation {
         }
-
-        
     }
-    //FIXME:
-    /* fix fontana display on Ipad pro lanscape mode */
-    /* fix forziere display on Ipad pro lanscape mode */
-    /* fix luci-dx-top display on Ipad pro lanscape mode */
 `;
-
-const SnowContainer = styled.div`
-    /* height: 100vh; */
-`;
+const SnowContainer = styled.div``;
