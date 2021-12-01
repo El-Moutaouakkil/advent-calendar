@@ -3,9 +3,11 @@ import styled from "styled-components";
 import Animation from "./Animation";
 import Snowfall from "react-snowfall";
 import Marker from "./Marker";
+import Modal from "./Modal";
 
 function MainBackground() {
     const [showSnow, setShowSnow] = useState(false);
+    const [modalIsOpen, setModalIsOpen] = useState(false);
     const animations = [
         "albero",
         "casette",
@@ -155,11 +157,45 @@ function MainBackground() {
                 className='title'
             />
             {getTodayMarkerProps() && (
-                <Marker
-                    top={getTodayMarkerProps().top}
-                    left={getTodayMarkerProps().left}
-                    link={getTodayMarkerProps().link}
-                />
+                <div
+                    className='starMarker'
+                    onClick={() => {
+                        setModalIsOpen(true);
+                        document
+                            .querySelector("body")
+                            .classList.add("bodyOverflow");
+                    }}>
+                    <Marker
+                        top={getTodayMarkerProps().top}
+                        left={getTodayMarkerProps().left}
+                        link={getTodayMarkerProps().link}
+                    />
+                </div>
+            )}
+            {modalIsOpen && (
+                <div
+                    className='modalContainer'
+                    onClick={() => {
+                        setModalIsOpen(false);
+                    }}>
+                    <Modal link={getTodayMarkerProps().link} />
+                </div>
+            )}
+            {modalIsOpen && (
+                <div
+                    className='close'
+                    onClick={() => {
+                        setModalIsOpen(false);
+                        document
+                            .querySelector("body")
+                            .classList.remove("bodyOverflow");
+                    }}>
+                    <img
+                        src='/assets/close.svg'
+                        alt='close button'
+                        className='close-img'
+                    />
+                </div>
             )}
             {/* <Marker top='44' left='83.5' link='#a link goes here ' /> */}
 
@@ -175,6 +211,15 @@ function MainBackground() {
 export default MainBackground;
 
 const BgContainer = styled.div`
+    .close {
+        width: 20px;
+        /* max-width: calc((2.5vw * 1920px) / 100vw); */
+        position: fixed;
+        right: 0.6em;
+        top: 0.6em;
+        cursor: pointer;
+    }
+
     img {
         display: block;
         width: 100%;
@@ -207,8 +252,8 @@ const BgContainer = styled.div`
     .fontana {
         width: 8.4vw;
         height: 10.4vw;
-        top: 36.6vw;
-        right: 15.8vw;
+        top: 36.7vw;
+        right: 15.9vw;
     }
     .forziere {
         width: 8vw;
@@ -262,6 +307,9 @@ const BgContainer = styled.div`
             height: 100vh;
             width: auto;
             /* height : auto; */
+        }
+        .close-img {
+            height: 20px;
         }
         .animation {
         }
