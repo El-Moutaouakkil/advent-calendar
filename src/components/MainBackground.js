@@ -71,7 +71,7 @@ function MainBackground() {
             left: "46.5",
         },
         {
-            dates: ["12/10", "12/22"], // 12/22
+            dates: ["12/01", "12/22"], // 12/10  12/22
             link: "https://www.luganoeventi.ch/it/calendario-avvento-10-r",
             top: "34",
             left: "43",
