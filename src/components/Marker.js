@@ -18,7 +18,7 @@ function Marker({ link, top, left }) {
         if (width <= 1024 && width < height) {
             setIsMobileScreen(true);
         } else setIsMobileScreen(false);
-    }, [width, height /* showModal */, , isMobileScreen]);
+    }, [width, height, /* showModal */, isMobileScreen]);
 
     return (
         <>
@@ -30,8 +30,9 @@ function Marker({ link, top, left }) {
                 <a
                     href={link}
                     className='starContainer'
-                    onClick={handleStarClick}>
-                    <img src='/assets/star.png' className='star-icon' alt='' />
+                    onClick={handleStarClick}
+                    >
+                    <img src='/assets/star.svg' className='star-icon' alt='' />
                 </a>
                 {/* {`window dimensions are : ${width}px x ${height}px`}
             <h2>{isMobileScreen ? "mobile screen" : "Desktop screen"}</h2> */}
@@ -68,7 +69,8 @@ const MarkerContainer = styled.div`
 
     .close {
         width: 20px;
-        position: relative;
-        top: -570px;
+        position : relative;
+        top : -570px;
+       
     }
 `;
