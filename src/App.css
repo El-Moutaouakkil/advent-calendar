@@ -8,13 +8,13 @@ html,
 body {
     /* max-width: 1920px; */
     /* max-width: 1000px; */
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 html {
     /* height: 100vh; */
     /* border: 5px solid crimson; */
 
-    background-color: black;
+    /* background-color: black; */
 }
 body {
     /* overflow: hidden; */
@@ -32,8 +32,6 @@ body {
     height: 100%; */
 }
 
-   
-
 @media (max-width: 1024px) and (orientation: portrait) {
     html,
     body {
@@ -43,6 +41,6 @@ body {
         margin: 0;
         padding: 0;
         overflow-y: hidden;
-        /* overflow-x: hidden; */
+        overflow-x: scroll;
     }
 }

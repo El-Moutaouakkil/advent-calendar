@@ -22,15 +22,16 @@ function MainBackground() {
 
     useEffect(() => {
         if (width <= 1024 && width < height) {
-            setSnowFallWidth(`${videoRef.current.clientWidth - 100}px`);
+            setSnowFallWidth(`${videoRef.current.clientHeight}px`);
         } else {
             setSnowFallWidth(`${window.innerWidth}px`);
         }
     }, [width, height]);
 
     useEffect(() => {
-        console.log("snowFallWidth is : ", snowFallWidth);
-    }, []);
+        console.log("video width is : " + videoRef.current.clientWidth);
+        console.log("snowFall width is : ", snowFallWidth);
+    }, [snowFallWidth]);
 
     const animations = [
         "albero",
@@ -188,7 +189,7 @@ function MainBackground() {
     return (
         <BgContainer>
             {/* <SnowContainer /> */}
-            {/* <Snowfall style={{ width: snowFallWidth }} snowflakeCount={250} /> */}
+            <Snowfall style={{ width: snowFallWidth }} snowflakeCount={250} />
             <video
                 ref={videoRef}
                 autoPlay
