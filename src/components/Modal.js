@@ -41,7 +41,7 @@ const ModalContainer = styled.div`
     top: 0;
     left: 0;
     /* opacity: 0; */
-	cursor: pointer;
+    cursor: pointer;
     .backdrop {
         background-color: rgba(0, 0, 0, 0.6);
         height: 100%;
@@ -64,7 +64,7 @@ const ModalContainer = styled.div`
         place-content: center;
         padding: 1em;
         /* transform: translate(-50%, -50%); */
-
+        z-index: 10000000;
         animation: fadeIn 1s;
 
         h1 {

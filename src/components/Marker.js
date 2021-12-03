@@ -63,16 +63,22 @@ const MarkerContainer = styled.div`
             isMobileScreen ? 2 + "vh" : 2 + "vw"};
         height: auto;
         filter: drop-shadow(1px 1px 1px lightgray);
+        cursor: pointer;
     }
-
+    
     top: ${({ isMobileScreen, top }) =>
         isMobileScreen ? top + "vh" : top + "vw"};
     left: ${({ isMobileScreen, left }) =>
         isMobileScreen ? left + "vh" : left + "vw"};
+    /* top: ${({ isMobileScreen, top }) =>
+        isMobileScreen ? `${top}vh` : `${top}vw`};
+    top: ${({ isMobileScreen, left }) =>
+        isMobileScreen ? `${left}vh` : `${left}vw`}; */
 
     .close {
         width: 20px;
         position: relative;
         top: -570px;
     }
+    /* z-index: 10000; */
 `;

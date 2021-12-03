@@ -1,14 +1,37 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import Animation from "./Animation";
 import Snowfall from "react-snowfall";
 import Marker from "./Marker";
 import Modal from "./Modal";
-
+import MyMarker from "./MyMarker";
+import SnowContainer from "./SnowContainer";
+import useWindowDimensions from "./useWindowDimensions";
 
 function MainBackground() {
     const [showSnow, setShowSnow] = useState(false);
     const [modalIsOpen, setModalIsOpen] = useState(false);
+    const [currentMarker, setCurrentMarker] = useState();
+    const [markerIndex, setMarkerIndex] = useState();
+    const starMarkerRef = useRef();
+    const videoRef = useRef();
+    const [width, height] = useWindowDimensions();
+    const [snowFallWidth, setSnowFallWidth] = useState(
+        `${window.innerWidth}px`
+    );
+
+    useEffect(() => {
+        if (width <= 1024 && width < height) {
+            setSnowFallWidth(`${videoRef.current.clientWidth - 100}px`);
+        } else {
+            setSnowFallWidth(`${window.innerWidth}px`);
+        }
+    }, [width, height]);
+
+    useEffect(() => {
+        console.log("snowFallWidth is : ", snowFallWidth);
+    }, []);
+
     const animations = [
         "albero",
         "casette",
@@ -35,13 +58,13 @@ function MainBackground() {
             left: "6",
         },
         {
-            dates: ["12/04"],
+            dates: ["12/4"],
             link: "https://www.luganoeventi.ch/it/calendario-avvento-4-x",
             top: "47",
             left: "15",
         },
         {
-            dates: ["12/07", "12/16"],
+            dates: ["12/7", "12/16"],
             link: "https://www.luganoeventi.ch/it/calendario-avvento-7-u",
             top: "41",
             left: "25",
@@ -53,31 +76,31 @@ function MainBackground() {
             left: "32",
         },
         {
-            dates: ["12/08", "12/19"],
+            dates: ["12/8", "12/19"],
             link: "https://www.luganoeventi.ch/it/calendario-avvento-8-t",
             top: "65",
             left: "40",
         },
         {
-            dates: ["12/02"],
+            dates: ["12/2"],
             link: "https://www.luganoeventi.ch/it/calendario-avvento-2-w",
             top: "60",
             left: "52",
         },
         {
-            dates: ["12/05", "12/25"],
+            dates: ["12/5", "12/25"],
             link: "https://www.luganoeventi.ch/it/calendario-avvento-5-z",
             top: "49",
             left: "46.5",
         },
         {
-            dates: ["12/01", "12/22"], // 12/10  12/22
+            dates: ["12/1", "12/22"], // 12/10  12/22
             link: "https://www.luganoeventi.ch/it/calendario-avvento-10-r",
             top: "34",
             left: "43",
         },
         {
-            dates: ["12/03", "12/18"],
+            dates: ["12/3", "12/18"],
             link: "https://www.luganoeventi.ch/it/calendario-avvento-3-y",
             top: "16.5",
             left: "37.7",
@@ -89,7 +112,7 @@ function MainBackground() {
             left: "63.5",
         },
         {
-            dates: ["12/06", "12/23"],
+            dates: ["12/6", "12/23"],
             link: "https://www.luganoeventi.ch/it/calendario-avvento-6-v",
             top: "27",
             left: "77",
@@ -101,13 +124,13 @@ function MainBackground() {
             left: "73",
         },
         {
-            dates: ["12/09"], // 12/09
+            dates: ["12/9"], // 12/9
             link: "https://www.luganoeventi.ch/it/calendario-avvento-9-s",
             top: "45.7",
             left: "68",
         },
         {
-            dates: ["12/01", "12/17"],
+            dates: ["12/1", "12/17"],
             link: "https://www.luganoeventi.ch/it/calendario-avvento-1-j",
             top: "44",
             left: "83.5",
@@ -115,12 +138,9 @@ function MainBackground() {
     ];
 
     const titleRef = useRef();
-    useEffect(() => {
-        setShowSnow(true);
-    }, []);
 
     const getTodayMarkerProps = () => {
-        const todayMarkerProps = markerProps.find((marker, index) => {
+        const todayMarkerPropsIndex = markerProps.find((marker) => {
             const todayDate = new Date();
             const [day, month] = [
                 todayDate.getDate(),
@@ -137,15 +157,57 @@ function MainBackground() {
                 return day === markerDay && month === markerMonth;
             });
         });
-        return todayMarkerProps;
+        return todayMarkerPropsIndex;
     };
+
+    const getTodayMarkerIndex = () => {
+        const todayMarkerPropsIndex = markerProps.findIndex((marker) => {
+            const todayDate = new Date();
+            const [day, month] = [
+                todayDate.getDate(),
+                todayDate.getMonth() + 1,
+            ];
+            return marker?.dates?.includes(`${month}/${day}`);
+        });
+        return todayMarkerPropsIndex;
+    };
+
+    useEffect(() => {
+        setShowSnow(true);
+    }, []);
+
+    useEffect(() => {
+        const todayMarkerProps = getTodayMarkerProps();
+        setCurrentMarker(todayMarkerProps);
+    }, []);
+    useEffect(() => {
+        const todayMarkerIndex = getTodayMarkerIndex();
+        setMarkerIndex(todayMarkerIndex);
+    }, []);
 
     return (
         <BgContainer>
-            <video autoPlay loop muted playsInline className='map-video'>
-                <source src='/assets/map.mp4' type='video/mp4'></source>
-            </video>
-            {/* <img src='/assets/map.jpg' alt='main background' />
+            {/* <SnowContainer /> */}
+            {/* <Snowfall style={{ width: snowFallWidth }} snowflakeCount={250} /> */}
+            <video
+                ref={videoRef}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className='map-video'
+                poster='/assets/map.jpg'
+                src='/assets/map.mp4'
+                type='video/mp4'></video>
+            {/* <img
+                src='/assets/map.jpg'
+                alt='main background'
+                className='map-video'
+               
+            /> */}
+            {/* <source src='/assets/map.mp4' type='video/mp4'></source> */}
+            {/* <img src='/assets/map.jpg' alt='main background' className='map-video'/> */}
+            {/* 
             {animations.map((animation, index) => (
                 <Animation
                     key={"" + index}
@@ -160,29 +222,38 @@ function MainBackground() {
                 alt='fontana title'
                 className='title'
             /> */}
-            {getTodayMarkerProps() && (
-                <div
-                    className='starMarker'
-                    onClick={() => {
-                        setModalIsOpen(true);
-                        document
-                            .querySelector("body")
-                            .classList.add("bodyOverflow");
+
+            {/* <div */}
+            {/* className='starMarker' */}
+            {/* onClick={() => { */}
+            {/* // setModalIsOpen(true); */}
+            {/* }}> */}
+            {/* <Marker
+                    top={markerProps[markerIndex]?.top}
+                    left={markerProps[markerIndex]?.left}
+                    link={markerProps[markerIndex]?.link}
+                /> */}
+            {/* <div
+                    className='rounded-marker'
+                    style={{
+                        backgroundColor: "orange",
+                        top: currentMarker?.top + "vh",
+                        left: currentMarker?.left + "vh",
+                        // top : '60vh',
+                        // left : '52vh'
                     }}>
-                    <Marker
-                        top={getTodayMarkerProps().top}
-                        left={getTodayMarkerProps().left}
-                        link={getTodayMarkerProps().link}
-                    />
-                </div>
-            )}
+                    {currentMarker?.top}
+                </div> */}
+
+            {/* </div> */}
+
             {modalIsOpen && (
                 <div
                     className='modalContainer'
                     onClick={() => {
                         setModalIsOpen(false);
                     }}>
-                    <Modal link={getTodayMarkerProps().link} />
+                    <Modal link={currentMarker?.link} />
                 </div>
             )}
             {modalIsOpen && (
@@ -190,9 +261,6 @@ function MainBackground() {
                     className='close'
                     onClick={() => {
                         setModalIsOpen(false);
-                        document
-                            .querySelector("body")
-                            .classList.remove("bodyOverflow");
                     }}>
                     <img
                         src='/assets/close.svg'
@@ -201,7 +269,7 @@ function MainBackground() {
                     />
                 </div>
             )}
-            {/* <Marker top='44' left='83.5' link='#a link goes here ' /> */}
+
             {/* {markerProps.map((marker, index) => (
                 <Marker
                     key={index + ""}
@@ -210,19 +278,20 @@ function MainBackground() {
                     link={marker.link}
                 />
             ))} */}
-            {showSnow && (
-                <SnowContainer>
-                    <Snowfall
-                        snowflakeCount={175}
-                        style={
-                            {
-                                /* background: "rgba(0,0,0,.5)" */
-                            }
-                        }
-                    />
-                </SnowContainer>
-            )}
-            {/* <div className='snowtest'>asdasdasdasdasdasd</div> */}
+
+            <div
+                ref={starMarkerRef}
+                className='starMarker'
+                onClick={(e) => {
+                    // e.preventDefault();
+                    // setModalIsOpen(true);
+                }}>
+                <MyMarker
+                    top={markerProps[markerIndex]?.top}
+                    left={markerProps[markerIndex]?.left}
+                    link={markerProps[markerIndex]?.link}
+                />
+            </div>
         </BgContainer>
     );
 }
@@ -230,6 +299,19 @@ function MainBackground() {
 export default MainBackground;
 const BgContainer = styled.div`
     cursor: grab;
+
+    .rounded-marker {
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        /* background-color: orange; */
+        display: grid;
+        place-content: center;
+        /* top: 100px;
+        left: 100px; */
+        z-index: 9999999999;
+    }
     .close {
         width: 20px;
         /* max-width: calc((2.5vw * 1920px) / 100vw); */
@@ -268,6 +350,9 @@ const BgContainer = styled.div`
     }
 
     @media screen and (max-width: 1024px) and (orientation: portrait) {
+        .rounded-marker {
+            /* top:  */
+        }
         img {
             /* height: 100vh;
             width: auto; */
@@ -304,4 +389,3 @@ const BgContainer = styled.div`
         }
     }
 `;
-const SnowContainer = styled.div``;

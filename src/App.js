@@ -7,25 +7,27 @@ import styled from "styled-components";
 import Marker from "./components/Marker";
 import Modal from "./components/Modal";
 import Snowfall from "react-snowfall";
+import MyMarker from "./components/MyMarker";
 
 function App() {
     return (
         <div className='App'>
-           
-            {/* <SnowContainer>
-                <Snowfall />
-            </SnowContainer> */}
             <MainBackground />
-            {/* <div className="modal"></div> */}
-            {/* <div className='modal'>
-                <Modal link='https://www.google.com/' />
-            </div> */}
+            {/* <Snowfall snowflakeCount={500} style={{ width: "822px" }} /> */}
+
+            {/* <SnowContainer></SnowContainer> */}
         </div>
     );
 }
 
 export default App;
 const SnowContainer = styled.div`
-    width: 100vw;
-`;
+    width: 50vw;
+    height: 100vh;
+    background-color: orange;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
 
+`;

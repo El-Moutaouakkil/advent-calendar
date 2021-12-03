@@ -1,7 +1,7 @@
 <svg
                     className='star-icon'
-                    fill='#477f78'
-                    opacity='0.3'
+                    fill='orange'
+                    opacity='0.8'
                     version='1.0'
                     xmlns='http://www.w3.org/2000/svg'
                     width='1280.000000pt'

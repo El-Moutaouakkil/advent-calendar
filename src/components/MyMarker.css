@@ -1,0 +1,22 @@
+.marker-container {
+    position: absolute;
+     filter: drop-shadow(5px 5px 1px lightgray);
+}
+
+.marker-container .star-icon {
+    width: 2vw;
+    height: auto;
+    cursor: pointer;
+}
+
+.close {
+    width: 20px;
+    position: relative;
+    top: -570px;
+}
+
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+    .marker-container .star-icon {
+        width: 2vh;
+    }
+}
