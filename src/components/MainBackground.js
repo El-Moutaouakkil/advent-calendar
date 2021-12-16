@@ -47,14 +47,26 @@ function MainBackground() {
     ];
     const markerProps = [
         {
-            dates: ["12/15", "12/21"],
+            dates: ["12/15"],
             link: "https://www.luganoeventi.ch/it/calendario-avvento-15-m",
             top: "83",
             left: "8.5",
         },
         {
-            dates: ["12/11", "12/24"],
+            dates: ["12/21"],
+            link: "https://www.luganoeventi.ch/it/calendario-avvento-21-e",
+            top: "83",
+            left: "8.5",
+        },
+        {
+            dates: ["12/11"],
             link: "https://www.luganoeventi.ch/it/calendario-avvento-11-q",
+            top: "60.5",
+            left: "6",
+        },
+        {
+            dates: ["12/24"],
+            link: "https://www.luganoeventi.ch/it/calendario-avvento-24-b",
             top: "60.5",
             left: "6",
         },
@@ -83,8 +95,14 @@ function MainBackground() {
             left: "32",
         },
         {
-            dates: ["12/8", "12/19"],
+            dates: ["12/8"],
             link: "https://www.luganoeventi.ch/it/calendario-avvento-8-t",
+            top: "65",
+            left: "40",
+        },
+        {
+            dates: ["12/19"],
+            link: "https://www.luganoeventi.ch/it/calendario-avvento-19-g",
             top: "65",
             left: "40",
         },
@@ -95,32 +113,63 @@ function MainBackground() {
             left: "52",
         },
         {
-            dates: ["12/5", "12/25"],
+            dates: ["12/5"],
             link: "https://www.luganoeventi.ch/it/calendario-avvento-5-z",
             top: "49",
             left: "46.5",
         },
         {
-            dates: ["12/10", "12/22"], // 12/10  12/22
+            dates: ["12/25"],
+            link: "https://www.luganoeventi.ch/it/calendario-avvento-25-a",
+            top: "49",
+            left: "46.5",
+        },
+        {
+            dates: ["12/10"], // 12/10  12/22
             link: "https://www.luganoeventi.ch/it/calendario-avvento-10-r",
             top: "34",
             left: "43",
         },
         {
-            dates: ["12/3", "12/18"],
+            dates: ["12/22"], // 12/10  12/22
+            link: "https://www.luganoeventi.ch/it/calendario-avvento-22-d",
+            top: "34",
+            left: "43",
+        },
+        {
+            dates: ["12/3"],
             link: "https://www.luganoeventi.ch/it/calendario-avvento-3-y",
             top: "16.5",
             left: "37.7",
         },
         {
-            dates: ["12/12", "12/20"], //  12/20
+            dates: ["12/18"],
+            link: "https://www.luganoeventi.ch/it/calendario-avvento-18-h",
+            top: "16.5",
+            left: "37.7",
+        },
+        {
+            dates: ["12/12"], //  12/20
             link: "https://www.luganoeventi.ch/it/calendario-avvento-12-p",
             top: "14",
             left: "63.5",
         },
         {
-            dates: ["12/6", "12/23"],
+            dates: ["12/20"], //  12/20
+            link: "https://www.luganoeventi.ch/it/calendario-avvento-20-f",
+            top: "14",
+            left: "63.5",
+        },
+        {
+            dates: ["12/6"],
             link: "https://www.luganoeventi.ch/it/calendario-avvento-6-v",
+            top: "27",
+            left: "77",
+        },
+
+        {
+            dates: ["12/23"],
+            link: "https://www.luganoeventi.ch/it/calendario-avvento-23-c",
             top: "27",
             left: "77",
         },
@@ -144,7 +193,7 @@ function MainBackground() {
         },
         {
             dates: ["12/17"],
-            link: "www.luganoeventi.ch/it/calendario-avvento-17-i",
+            link: "https://www.luganoeventi.ch/it/calendario-avvento-17-i",
             top: "44",
             left: "83.5",
         },
@@ -300,9 +349,12 @@ function MainBackground() {
                     // setModalIsOpen(true);
                 }}>
                 <MyMarker
-                    top={markerProps[markerIndex]?.top}
-                    left={markerProps[markerIndex]?.left}
-                    link={markerProps[markerIndex]?.link}
+                    top={markerProps[markerIndex]?.top || 25}
+                    left={markerProps[markerIndex]?.left || 45}
+                    link={
+                        markerProps[markerIndex]?.link ||
+                        "https://www.luganoeventi.ch/it/calendario-avvento-1-j"
+                    }
                 />
             </div>
         </BgContainer>
